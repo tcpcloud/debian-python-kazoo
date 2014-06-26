@@ -1,5 +1,74 @@
-kazoo (0+git20130102) unstable; urgency=low
+kazoo (1.3.1-1ubuntu1) utopic; urgency=medium
 
-  * Initial package.
+  * Merge with Debian unstable. Remaining Ubuntu changes:
+    - no-zope.patch: Remove repoze.sphinx-interface (applied upstream now)
+    - Add autopkgtest.
 
- -- Neil Williams <neil@spladug.net>  Fri, 02 Jan 2013 23:20:03 -0800
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 26 Jun 2014 11:08:48 +0200
+
+kazoo (1.3.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Use pybuild.
+  * Add Python 3 support (Closes: #739482).
+  * Bumped standards version to 3.9.5. No changes needed.
+
+ -- Neil Williams <neil@spladug.net>  Wed, 19 Feb 2014 14:17:54 -0800
+
+kazoo (1.2.1-1ubuntu5) utopic; urgency=medium
+
+  * Add missing allow-stderr autopkgtest restriction.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 13 May 2014 08:51:49 +0200
+
+kazoo (1.2.1-1ubuntu4) trusty; urgency=low
+
+  * Fix debian/patches/no-zope.patch even harder since it drops a needed
+    import statement from kazoo/handlers/threading.py which causes multiple
+    test failures due to tcp timeouts
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 13 Apr 2014 03:48:10 -0400
+
+kazoo (1.2.1-1ubuntu3) trusty; urgency=medium
+
+  * Fix syntax error in def spawn in kazoo/interfaces.py introduced by
+    debian/patches/no-zope.patch (added in 1.2.1-1ubuntu1) so the package
+    will be installable
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 13 Apr 2014 01:42:26 -0400
+
+kazoo (1.2.1-1ubuntu2) trusty; urgency=medium
+
+  * debian/rules: Fix FTBFS. 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 25 Mar 2014 10:16:42 -0400
+
+kazoo (1.2.1-1ubuntu1) trusty; urgency=medium
+
+  * debian/control: Dropped python-repoze.sphinx.autointerface.
+  * debian/tests/*: Add dep8 tests.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 24 Mar 2014 11:54:14 -0400
+
+kazoo (1.2.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix sphinx documentation build on clean systems (added
+    python-gevent to Build-Depends and patched config).
+  * Bumped standards version to 3.9.4. No changes needed.
+
+ -- Neil Williams <neil@spladug.net>  Mon, 26 Aug 2013 06:26:20 +0000
+
+kazoo (0.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix debian/copyright missing licenses for kazoo/tests/util.py and
+    kazoo/testing/common.py.
+
+ -- Neil Williams <neil@spladug.net>  Mon, 18 Mar 2013 16:46:39 -0700
+
+kazoo (0.8-1) unstable; urgency=low
+
+  * Initial package. (Closes: #696511)
+
+ -- Neil Williams <neil@spladug.net>  Fri, 21 Dec 2012 19:27:43 -0800

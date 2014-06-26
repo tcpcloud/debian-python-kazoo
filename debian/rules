@@ -1,7 +1,10 @@
 #!/usr/bin/make -f
 
+export PYBUILD_NAME=kazoo
+export PYBUILD_DISABLE=test
+
 %:
-	dh $@ --with python2,sphinxdoc --buildsystem=python_distutils
+	dh $@ --with python2,python3,sphinxdoc --buildsystem=pybuild
 
 .PHONY: override_dh_installchangelogs
 override_dh_installchangelogs:

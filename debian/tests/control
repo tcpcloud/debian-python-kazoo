@@ -1,0 +1,3 @@
+Tests: python-kazoo
+Depends: @, python-nose, zookeeper, libzookeeper-java, python-mock
+Restrictions: allow-stderr
