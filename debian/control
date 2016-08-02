@@ -1,7 +1,8 @@
 Source: kazoo
 Section: python
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Maintainer: tcpcloud Packaging Team <pkg-team@tcpcloud.eu>
+#Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Neil Williams <neil@spladug.net>
 Build-Depends: debhelper (>= 8),
                dh-python,
